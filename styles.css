@@ -1,0 +1,88 @@
+:root{
+  --bg:#0c1220;
+  --card:#151d31;
+  --text:#eef3ff;
+  --muted:#afbdd7;
+  --accent:#4f8cff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,#0b1120 0%,#10182a 100%);
+  color:var(--text);
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:0 auto}
+.topbar{
+  position:sticky;top:0;z-index:20;
+  backdrop-filter: blur(10px);
+  background:rgba(10,16,32,.75);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 0;
+}
+.nav nav{display:flex;gap:18px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.2rem}
+.nav a{color:var(--muted)}
+.nav a:hover{color:#fff}
+.hero{padding:74px 0 42px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.eyebrow{color:#8bb6ff;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;margin-bottom:10px}
+h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.02;margin:.1em 0 .35em}
+.lead{color:var(--muted);font-size:1.08rem;line-height:1.7;max-width:62ch}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin:24px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:14px;font-weight:700;border:1px solid transparent}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.secondary{background:transparent;border-color:#44557f;color:#dbe6ff}
+.hero-points{display:grid;gap:10px;padding-left:18px;color:var(--muted)}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:24px;padding:22px;box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.phone-mock{padding:18px;max-width:430px;margin-inline:auto}
+.phone-head{height:22px;width:110px;border-radius:14px;background:#0a1020;margin:0 auto 14px}
+.phone-screen{background:#edf3ff;color:#0b1934;border-radius:26px;padding:18px;min-height:510px}
+.mock-bill,.mock-box,.mock-save,.mock-tag{border-radius:18px;padding:14px 16px;margin-bottom:12px}
+.mock-bill{background:#fff}
+.mock-title{font-weight:700;color:#20365d}
+.mock-amount{font-size:1.8rem;font-weight:800;margin:8px 0}
+.mock-line{color:#536886;font-size:.95rem}
+.mock-tag{display:inline-block;background:#dce7ff;color:#21417c;font-weight:700;font-size:.9rem}
+.mock-box{background:#f7f9fd;border:1px solid #dae2f1}
+.mock-save{background:#2563eb;color:#fff;text-align:center;font-weight:800}
+.stats{padding:12px 0 28px}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.stat span{color:var(--muted)}
+.section{padding:72px 0}
+.section.alt{background:rgba(255,255,255,.03)}
+.section h2{font-size:clamp(1.8rem,3vw,2.4rem);margin:0 0 24px}
+.feature-grid,.pricing-grid{display:grid;gap:18px}
+.feature-grid{grid-template-columns:repeat(4,1fr)}
+.pricing-grid{grid-template-columns:repeat(4,1fr)}
+.feature-grid p,.price-card p,.doc p,.doc li{color:var(--muted);line-height:1.7}
+.price-card ul{padding-left:18px;color:var(--muted);line-height:1.7}
+.price{font-size:2rem;font-weight:900;margin:8px 0 10px}
+.price span{font-size:1rem;font-weight:600;color:var(--muted)}
+.price-card.featured{outline:2px solid rgba(79,140,255,.55)}
+.badge{display:inline-block;background:rgba(79,140,255,.16);color:#9ec2ff;padding:6px 10px;border-radius:999px;font-size:.8rem;font-weight:700;margin-bottom:8px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.faq-list{display:grid;gap:14px}
+details summary{cursor:pointer;font-weight:700}
+details p{margin-top:12px}
+.footer{border-top:1px solid rgba(255,255,255,.08);padding:26px 0 40px}
+.footer-grid{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted)}
+.doc{max-width:900px;padding:56px 0 72px}
+.doc h1,.doc h2,.doc h3{color:#fff}
+.doc ul{color:var(--muted)}
+@media (max-width: 980px){
+  .hero-grid,.two-col{grid-template-columns:1fr}
+  .feature-grid,.pricing-grid,.stats-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 640px){
+  .nav{align-items:flex-start;gap:12px;flex-direction:column}
+  .feature-grid,.pricing-grid,.stats-grid{grid-template-columns:1fr}
+  .hero{padding-top:42px}
+}
